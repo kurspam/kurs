@@ -71,6 +71,9 @@ console.log(losuj1);
 //zad.dom.
 //wylosuj liczby z przedziału <15;25>
 
+var losuj2 = Math.floor(Math.random() * 11 + 15);
+console.log("zad dom: " + losuj2);
+
 //##################################################################
 
 var elPi = document.getElementById('pi');
