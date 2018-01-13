@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--<!--Arkusz E.14-01-15.01-->
     <div id="baner">
         <a href="index.html"><img src="baner.jpg"></a>
     </div>
@@ -14,6 +15,26 @@
         - <a href="strona1.html">Proste działania</a><br>
         - <a href="strona2.html">Potęgowanie</a>
     </div>
-    <div id="tresc"></div>
+    <div id="tresc">
+        <h1>POTĘGOWANIE</h1>
+        <form>
+            Podaj podstawę potęgi:
+            <input type="number" id="podstawa"><br><br>
+            Podaj dodatni, całkowity wykładnik potęgi:
+            <input type="number" id="wykladnik"><br><br>
+        </form>
+        <button id="potegowanie">POTĘGOWANIE</button><br><br>
+        <div id="komunikat"></div>
+        <script>
+            var elPodstawa = document.getElementById('podstawa');
+            var elWykladnik = document.getElementById('wykladnik');
+            var elPotegowanie = document.getElementById('potegowanie');
+            var elKomunikat = document.getElementById('komunikat');
+
+            elPotegowanie.onclick = function() {
+                //zadanie domowe
+            }
+        </script>
+    </div>
 </body>
 </html>

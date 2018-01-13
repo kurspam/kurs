@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--Arkusz E.14-01-15.01-->
     <div id="baner">
         <a href="index.html"><img src="baner.jpg"></a>
     </div>
@@ -40,6 +41,10 @@
         var dlugosc2;
         var wartosc1;
         var wartosc2;
+        var dodawanie;
+        var odejmowanie;
+        var mnozenie;
+        var dzielenie;
 
         elDodawanie.onclick = function(){
             /*var x = elPierwsza.value;
@@ -48,12 +53,76 @@
             console.log(dlugosc);*/
 
             wartosc1 = elPierwsza.value;
+            //wartosc1 = parseInt(wartosc1);
+            wartosc1 = parseFloat(wartosc1);
             dlugosc1 = wartosc1.length;
+            wartosc2 = elDruga.value;
+            //wartosc2 = parseInt(wartosc2);
+            wartosc2 = parseFloat(wartosc2);
+            dlugosc2 = wartosc2.length;
 
-            if(dlugosc1 == 0){
+            if(dlugosc1 == 0 || dlugosc2 == 0){
                 elKomunikat.innerHTML = 'Proszę uzupełnić obie liczby';
             }else{
-                elKomunikat.innerHTML = '';
+                //console.log(typeof(wartosc1));
+                dodawanie = wartosc1 + wartosc2;
+                elKomunikat.innerHTML = 'Suma wynosi: ' + dodawanie;
+            }
+        }
+
+        elOdejmowanie.onclick = function(){
+            wartosc1 = elPierwsza.value;
+            wartosc1 = parseFloat(wartosc1);
+            dlugosc1 = wartosc1.length;
+            wartosc2 = elDruga.value;
+            wartosc2 = parseFloat(wartosc2);
+            dlugosc2 = wartosc2.length;
+
+            if(dlugosc1 == 0 || dlugosc2 == 0){
+                elKomunikat.innerHTML = 'Proszę uzupełnić obie liczby';
+            }else{
+                //console.log(typeof(wartosc1));
+                odejmowanie = wartosc1 - wartosc2;
+                elKomunikat.innerHTML = 'Różnica wynosi: ' + odejmowanie;
+            }
+        }
+
+        elMnozenie.onclick = function(){
+            wartosc1 = elPierwsza.value;
+            wartosc1 = parseFloat(wartosc1);
+            dlugosc1 = wartosc1.length;
+            wartosc2 = elDruga.value;
+            wartosc2 = parseFloat(wartosc2);
+            dlugosc2 = wartosc2.length;
+
+            if(dlugosc1 == 0 || dlugosc2 == 0){
+                elKomunikat.innerHTML = 'Proszę uzupełnić obie liczby';
+            }else{
+                //console.log(typeof(wartosc1));
+                mnozenie = wartosc1 * wartosc2;
+                elKomunikat.innerHTML = 'Iloczyn wynosi: ' + mnozenie;
+            }
+        }
+
+
+        elDzielenie.onclick = function(){
+            wartosc1 = elPierwsza.value;
+            wartosc1 = parseFloat(wartosc1);
+            dlugosc1 = wartosc1.length;
+            wartosc2 = elDruga.value;
+            wartosc2 = parseFloat(wartosc2);
+            dlugosc2 = wartosc2.length;
+
+            if(dlugosc1 == 0 || dlugosc2 == 0){
+                elKomunikat.innerHTML = 'Proszę uzupełnić obie liczby';
+            }else{
+                if(wartosc2 == 0){
+                    elKomunikat.innerHTML = 'Nie wolno dzielić przez zero';
+                }else{
+                    dzielenie = wartosc1 / wartosc2;
+                    //dzielenie = dzielenie.toFixed(2);
+                    elKomunikat.innerHTML = 'Iloraz wynosi: ' + dzielenie.toFixed(2);
+                 }
             }
         }
     </script>
